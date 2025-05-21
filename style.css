@@ -1,0 +1,369 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f0;
+    color: #222;
+}
+
+header {
+    background: #e62222;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    height: 60px;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #f9dd94;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(230,126,34,0.07);
+}
+
+h1, h2 {
+    color: #e67e22;
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.menu-plat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(230,126,34,0.07);
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 20px;
+}
+
+.menu-plat img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(230,126,34,0.10);
+    margin-bottom: 10px;
+}
+
+.menu-plat h3 {
+    margin: 10px 0 5px 0;
+    color: #d35400;
+}
+
+.menu-plat p {
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.menu-plat {
+    display: flex;
+    flex-direction: column; /* colonne pour image au-dessus, texte en dessous */
+    align-items: center;
+    max-width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(230,126,34,0.07);
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn-commande, .btn-reservation, .btn-feedback, .btn-contact {
+    display: inline-block;
+    background: #e62222;
+    color: #fff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.btn-commande:hover, .btn-reservation:hover, .btn-feedback:hover, .btn-contact:hover {
+    background: #00d31c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #e67e22;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #2267e6;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Zoom léger au survol */
+    opacity: 0.8; /* Réduction de l'opacité pour un effet visuel */
+}
+
+
+#presentation img {
+    display: block;
+    margin: 30px auto 0 auto;
+    max-width: 90%;
+    width: 1000px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(230,126,34,0.15);
+}
+
+footer {
+    background: #e62222;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+    border-radius: 0 0 12px 12px;
+}
+
+@media (max-width: 700px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    section {
+        padding: 15px 5px;
+    }
+    .logo img {
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+
+.galerie-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.galerie-images img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(230,126,34,0.13);
+    transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.galerie-images img:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(230,126,34,0.25);
+    z-index: 2;
+}
+
+/* Animation sur toutes les images du site au survol */
+img:hover {
+    filter: brightness(1.08) saturate(1.2);
+    transition: filter 0.3s;
+}
+
+@media (max-width: 700px) {
+    .galerie-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .galerie-images img {
+        width: 95vw;
+        height: 180px;
+    }
+}
+#form-contact-whatsapp {
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    background: #fff8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(230,126,34,0.08);
+    padding: 25px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#form-contact-whatsapp label {
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 4px;
+}
+
+#form-contact-whatsapp input,
+#form-contact-whatsapp textarea {
+    padding: 8px;
+    border: 1px solid #e67e22;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fff;
+    resize: none;
+}
+
+#form-contact-whatsapp input:focus,
+#form-contact-whatsapp textarea:focus {
+    outline: 2px solid #e67e22;
+}
+
+#form-contact-whatsapp .btn-contact {
+    background: #d32525;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+#form-contact-whatsapp .btn-contact:hover {
+    background: #128c5d;
+}
+
+/* --- NAVIGATION RESPONSIVE --- */
+header {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    height: 60px;
+    margin-left: 30px;
+    transition: height 0.3s;
+}
+
+/* Menu burger pour mobile */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #3b20d8;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 900px) {
+    .logo img {
+        height: 40px;
+        margin-left: 10px;
+    }
+    nav ul {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 10px 0;
+    }
+    .logo img {
+        height: 36px;
+        margin-left: 8px;
+    }
+    nav ul {
+        flex-direction: column;
+        background: #e62222;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        align-items: center;
+        gap: 0;
+        padding: 0;
+        display: none;
+        z-index: 1000;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #fff3;
+        padding: 12px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* --- FIN NAVIGATION RESPONSIVE --- */
